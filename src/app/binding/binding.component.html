@@ -1,0 +1,18 @@
+<h4 class="well text-left">
+    CLick your favorite framework<br/>
+    <li *ngFor="let item of Items" 
+    style="cursor:pointer;background:lightcoral;margin-left:40px;color:black"
+(click)="onItemClicked(item)">{{item.name}}
+    </li>
+    </h4>
+<h4 class="well" *ngIf="clicked; then show else warn"></h4>
+<ng-template #show>
+    you have selected : 
+    <input type="text" [(ngModel)]="clickedItem.name">
+</ng-template>
+<ng-template #warn>
+    <h4 class="text-danger"> select your framework</h4>
+</ng-template>
+<div class="container">
+    <latest-news></latest-news>
+</div>

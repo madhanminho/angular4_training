@@ -1,0 +1,12 @@
+Name : <input type="text" [(ngModel)]="name">{{name | uppercase}}
+<p class="bgcolor">
+  {{time}} 
+</p>
+
+<h4 [style.color]="titleStyle">Property binding</h4>
+
+<button [disabled]="buttonStatus1" (click)="Save($event)">save</button>
+
+<button [disabled]="buttonStatus2=='enabled'">Update</button>
+
+<h4 [style.color]="titleStyle ?   'green' : 'pink'">{{name}}</h4>
